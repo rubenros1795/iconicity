@@ -4,7 +4,7 @@ import pandas as pd
 import argparse
 
 
-basepath = "F:/react-data/iconic/tsv/"
+basepath = "path/to/tsv/files"
 
 
 if __name__ == "__main__":
@@ -23,7 +23,3 @@ if __name__ == "__main__":
 
     model = Embeddings.TrainModel(texts)
     model.save(f"models/doc2vec-{photo}-e75.model")
-
-    # umap_model = Cluster.DrUmap(model)
-    # gmm_results = Cluster.GMM(model,umap_model)
-    # gmm_results.to_csv('doc2vec-gmm-results.csv',index=False)
