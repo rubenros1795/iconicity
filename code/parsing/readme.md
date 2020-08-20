@@ -9,13 +9,23 @@ The identification of the language requires the ```langid``` python module.
 The parsing script needs a particular folder structure:
 
 ```
-    +-- photo_folder
-    |   +-- example_photo_1_folder
-            +-- example_photo_1_folder_source
-                +-- example_photo_1.jpg
-    |   +-- example_photo_2_folder
-            +-- example_photo_2_folder_source
-                +-- example_photo_2.jpg
+    +-- photos
+    |   +-- AbuGhraib
+            +-- AbuGhraib_source
+                +-- AbuGhraib.jpg
+            +-- AbuGhraib_1
+                +-- AbuGhraib-gcv-output-name.json
+                +-- img
+                    +-- republication_image_1.jpg
+                    +-- republication_image_2.jpg
+            +-- AbuGhraib_2
+                +-- republication_image_1_gcv_output.json
+                +-- img
+                    +-- republication_iter_2.jpg
+    |   +-- AlanKurdi
+            +-- AlanKurdi_source
+            +-- AlanKurdi_1
+            +-- AlanKurdi_2
 ```
 
 After generating the .tsv files with ```transform2csv.py``` dates can be scraped with ```parse-csv-dates.py```. Similarly, .html pages are scraped and parsed for textual content with ```parse-csv-html.py``` and ```parse-csv-text.py```.
