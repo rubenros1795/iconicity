@@ -133,12 +133,12 @@ def Scrape(list_tpls):
 ### 
 
 if __name__ == "__main__":
-    #list_photos = [i[:-4] for i in os.listdir('F:/react-data/iconic/tsv/') if '.tsv' in i]
-    for photo in ["TimesSquareKiss","VietCong","WarRoom"]:
-        fn_results = f"F:/react-data/iconic/image-analysis/test_results/{photo}.csv"
+    list_photos = []
+    for photo in list_photos:
+        fn_results = f"path/to/{photo}.csv"
         pd.DataFrame(columns = "page_url image_url photo filename number_matches correct".split(' ')).to_csv(fn_results,sep=";",index=False)
-        df = LoadData(f"F:/react-data/iconic/tsv/{photo}.tsv")
-        img1 = glob.glob(f"D:/react-data/iconic/{photo}/{photo}_source/*")[0]
+        df = LoadData(f"path/to/tsv/files/{photo}.tsv")
+        img1 = glob.glob(f"path/to/original/photo/{photo}/{photo}_source/*")[0]
         img1 = cv2.imread(img1)
         img1 = preprocess.Transform(img1)
 

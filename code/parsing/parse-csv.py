@@ -232,17 +232,14 @@ def Pipe(photo,tsv_path,datapath):
 if __name__ == "__main__":
 
     # parser = argparse.ArgumentParser()
-
     # parser.add_argument('-f', '--photo', dest="photo", required=True)
-
     # args = parser.parse_args()
-
     # photo = args.photo
-
-    for photo in ['Che']:
+    list_photos = []
+    for photo in list_photos:
 
         Pipe(
             photo=photo,
-            tsv_path=f"F:/react-data/iconic/tsv/{photo}.tsv",
-            datapath="F:/react-data/iconic/tsv/"
+            tsv_path=f"path/to/tsv/files/{photo}.tsv",
+            datapath="path/to/tsv/files"
             )

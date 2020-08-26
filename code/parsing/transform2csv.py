@@ -8,7 +8,7 @@ import langid
 from langid.langid import LanguageIdentifier, model
 identifier = LanguageIdentifier.from_modelstring(model, norm_probs=True)
 
-base_path = "D:/react-data/protest/selection2"
+base_path = "path/to/photo/folder"
 
 ## Functions for Whole File
 def GetLabels(json_file):
@@ -154,7 +154,7 @@ def Transform2Csv(photo):
                             continue
 
 
-list_photos = "1 2 5 7 8 9 10 12 13 14 15 24 29 30 Athens Barcelona Berlin Copenhagen HalifaxNS London London4 Rafah Rome2 Rome3 SouthAfrica".split(' ')
+list_photos = ['']
 print(len(list_photos))
 
 for photo in list_photos:
